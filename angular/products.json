@@ -1,0 +1,25 @@
+[
+	{
+		"name" : "Aneesh kumar",
+		"price" : 20,
+		"description" : "some jaffa description",
+		"specification" : "jaffa spesification",
+		"reviews" : 
+				[{
+					"stars": 5,
+					"body": "I love this product!",
+					"author": "joe@thomas.com",
+					"color" : "blue",
+					"terms" : "true"
+				},
+				{
+					"stars": "1",
+					"body": "This product sucks",
+					"author": "tim@hater.com",
+					"color" : "red",
+					"terms" : "true"
+				}],
+		"canPurchase" : "true",
+		"soldOut" : "false"  
+	}
+]

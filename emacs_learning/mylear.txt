@@ -1,0 +1,21 @@
+
+c - x - b     --> list of buffers
+c - x - c -b  --> list of buffer
+c - x -       --> kill buffer
+
+f3 - start recording 
+f4 - end recording
+
+m - < beginning of file 
+m - > end of the file
+
+c - w cut 
+m - w copy
+c - y paste
+
+m - x spell check
+
+c- x -\ -- all indent 
+
+c - m - 1
+m -shift -1

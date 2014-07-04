@@ -1,0 +1,59 @@
+<ul class="nav nav-pills" >
+					<li ng-class="{ active:panel.isSelected(1)}"><a href ng-click="panel.setTab(1)">Description </a> </li>
+					<li ng-class="{ active:panel.isSelected(2)}"><a href ng-click="panel.setTab(2)">Specification </a> </li>
+					<li ng-class="{ active:panel.isSelected(3)}"><a href ng-click="panel.setTab(3)">Reviews </a> </li>
+				</ul>
+				<div  ng-show="panel.isSelected(1)">
+					<h4>Description</h4>
+					<p>{{product.description}}</p>
+				</div>
+				<div  ng-show="panel.isSelected(2)">
+					<h4>Specifications</h4>
+					<blockquote>{{product.specification}}</blockquote>
+				</div>
+				<div  ng-show="panel.isSelected(3)">
+					<h4>Reviews</h4>
+					<blockquote ng-repeat="review in product.reviews">
+						<b>Stars: {{review.stars}}</b>
+						{{review.body}}
+						<cite>by: {{review.author}}</cite>
+					</blockquote>
+					<br>
+					<form role="form" name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid &&reviewCtrl.addReview(product)" novalidate>
+					  <blockquote>
+						<b>Stars: {{ reviewCtrl.review.stars}}</b>
+						{{ reviewCtrl.review.body}}
+						<cite>by: {{ reviewCtrl.review.author}}</cite>
+					  </blockquote>
+					  <div class="form-group">
+					    <label>Rate it</label>
+					    <select ng-model="reviewCtrl.review.stars" class="form-control" required>
+							<option value="1">1 star</option>
+							<option value="2">2 stars</option>
+							<option value="3">3 star</option>
+							<option value="4">4 stars</option>
+							<option value="5">5 star</option>
+						</select>
+					  </div>
+					  <div class="form-group">
+					    <label>Review Body</label>
+					   	<textarea ng-model="reviewCtrl.review.body" class="form-control"></textarea>
+					  </div>
+					  <div class="form-group">
+					    <label >Email address</label>
+					    <input type="email" ng-model="reviewCtrl.review.author" class="form-control"/>
+					  </div>
+					  <div class="form-group">
+					    <input ng-model="reviewCtrl.review.terms" type="checkbox" /> <label > I agree to the terms</label>
+					  </div>
+					  <div class="form-group">
+					  	<input ng-model="reviewCtrl.review.color" type="radio" value="red" /> Red
+						<input ng-model="reviewCtrl.review.color" type="radio" value="blue" /> Blue
+						<input ng-model="reviewCtrl.review.color" type="radio" value="green" /> Green
+					  </div>								
+					  <button type="submit" class="btn btn-default">Submit</button>
+					  <div> reviewForm is {{reviewForm.$valid}} </div>
+					</form>
+
+
+				</div>
