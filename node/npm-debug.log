@@ -1,0 +1,57 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'multipart' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose cache add [ 'multipart', null ]
+5 verbose cache add name=undefined spec="multipart" args=["multipart",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'multipart',
+6 verbose parsed url   path: 'multipart',
+6 verbose parsed url   href: 'multipart' }
+7 silly lockFile 2c64542b-multipart multipart
+8 verbose lock multipart /home/node1/.npm/2c64542b-multipart.lock
+9 silly lockFile 2c64542b-multipart multipart
+10 silly lockFile 2c64542b-multipart multipart
+11 verbose addNamed [ 'multipart', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile e5ad6657-multipart multipart@
+14 verbose lock multipart@ /home/node1/.npm/e5ad6657-multipart.lock
+15 silly addNameRange { name: 'multipart', range: '*', hasData: false }
+16 verbose url raw multipart
+17 verbose url resolving [ 'https://registry.npmjs.org/', './multipart' ]
+18 verbose url resolved https://registry.npmjs.org/multipart
+19 info trying registry request attempt 1 at 09:00:33
+20 http GET https://registry.npmjs.org/multipart
+21 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
+22 info trying registry request attempt 2 at 09:00:48
+23 http GET https://registry.npmjs.org/multipart
+24 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
+25 info trying registry request attempt 3 at 09:01:48
+26 http GET https://registry.npmjs.org/multipart
+27 silly lockFile e5ad6657-multipart multipart@
+28 silly lockFile e5ad6657-multipart multipart@
+29 error network tunneling socket could not be established, cause=Parse Error
+29 error network This is most likely not a problem with npm itself
+29 error network and is related to network connectivity.
+29 error network In most cases you are behind a proxy or have bad network settings.
+29 error network
+29 error network If you are behind a proxy, please make sure that the
+29 error network 'proxy' config is set properly.  See: 'npm help config'
+30 error System Linux 3.13.0-35-generic
+31 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "multipart"
+32 error cwd /home/node1/github.com/learning/node
+33 error node -v v0.10.28
+34 error npm -v 1.4.9
+35 error code ECONNRESET
+36 verbose exit [ 1, true ]
