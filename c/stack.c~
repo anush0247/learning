@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+typedef struct nodeDef
+{
+  struct nodeDef *next;
+  int data;
+} node;
+
+
+void push(node *stack, int data);
+int pop(node *stack);
+
+int main(char *argc, int argv)
+{
+  char ch;
+  do{
+    // ch = getchar();
+    scanf("%[^\n]",&ch);
+    printf ("%d\n",ch);
+  }
+  while(ch != '4');
+  return 0; 
+}
